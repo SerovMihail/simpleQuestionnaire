@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # parts of app
+    'products',
+    'orders',
     'landing',
 
     # frameworks, libs block
@@ -133,6 +135,6 @@ STATICFILES_DIRS = (
 
 # STATIC_ROOT = os.path.join(BASE_DIR, "static", "landing")
 #
-# MEDIA_URL = '/img/'
-#
-# MEDIA_ROOT = os.path.join(BASE_DIR, "static/landing", "img")
+MEDIA_URL = '/img/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "static/landing")
