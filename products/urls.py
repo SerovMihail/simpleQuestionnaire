@@ -19,5 +19,4 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.landing, name='landing')
-
 ]

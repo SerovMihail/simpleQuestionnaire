@@ -2,25 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Hello, bitch</title>
+    <title>Truly Shop</title>
 
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    {% load static %}
+    {% load bootstrap3 %}
+    {% bootstrap_css %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    Look at this form!
+    {#    Look at this form!#}
+    {##}
+    {#    <button class="btn btn-warning">Warn!</button>#}
+    {##}
+    {#    <form action="" method="post"> {% csrf_token %}#}
+    {#         {{ form.as_p }}#}
+    {#         <button type="submit">Отправить</button>#}
+    {#    </form>#}
 
-    <button class="btn btn-warning">Warn!</button>
+    {#    <div class="container-fluid">#}
+    {#        <img src="{% static 'img/apple-tv.jpg' %}" alt="" class="img-responsive">#}
+    {#    </div>#}
 
-    <form action="" method="post"> {% csrf_token %}
-         {{ form.as_p }}
-         <button type="submit">Отправить</button>
-    </form>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Truly Shop</a>
+        </div>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Link</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <img src="{% static 'img/apple-tv.jpg' %}" alt="" class="img-responsive">
+
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Добро пожаловать в наш интернет-магазин!</h1>
+          <p>Только у нас вы сможете приобрести широкий спектр техники</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Перейти к покупкам</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            {% for product in products %}
+            <ul class="list-unstyled">
+                <li class="col-md-4">
+                    <a href="#" class="thumbnail">
+                      <img src="{% static 'img/diagonal-abstract.jpg' %}" alt="...">
+                    </a>
+                </li>
+                <li class="col-md-4">
+                    <a href="#" class="thumbnail">
+                      <img src="{% static 'img/diagonal-abstract.jpg' %}" alt="...">
+                    </a>
+                </li>
+                <li class="col-md-4">
+                    <a href="#" class="thumbnail">
+                      <img src="{% static 'img/diagonal-abstract.jpg' %}" alt="...">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+   <script src="{% bootstrap_jquery_url %}"></script>
+    {% bootstrap_javascript %}
+
+
+
 
 </body>
 </html>

@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'landing'
+    # parts of app
+    'landing',
+
+    # frameworks, libs block
+    'bootstrap3'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +125,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+  os.path.join(BASE_DIR, "static", "landing"),
+)
+
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "static", "landing")
+#
+# MEDIA_URL = '/img/'
+#
+# MEDIA_ROOT = os.path.join(BASE_DIR, "static/landing", "img")
