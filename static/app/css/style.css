@@ -1,18 +1,16 @@
-.footerr {
-  position: absolute;
+.navbar {
+  margin-bottom: 0;
+}
+
+.footer {
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 80px;
-  background-color: #777;
+  background-color: #F8F8F8;
 }
 
-.red-bg {
-    margin: 20px 0;
-    color: #ffffff;
-    background-color: red;
+.footer-text {
+  margin: 20px 0;
 }
 
-.suka-django {
-    background-color: yellow;
-}

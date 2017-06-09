@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     # parts of app
     'products',
     'orders',
-    'landing',
+    'main',
 
     # frameworks, libs block
     'bootstrap3'
@@ -125,14 +125,13 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-  os.path.join(BASE_DIR, "static", "app")
+  os.path.join(BASE_DIR, 'static', 'app'),
 )
 
-# STATIC_ROOT = os.path.join(BASE_DIR, "static", "app")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static', 'dist')
 
 MEDIA_URL = '/media/'
 

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="jumbotron">
+          <h1>Добро пожаловать в наш интернет-магазин!</h1>
+          <p>Только у нас вы сможете приобрести широкий спектр техники</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Перейти к покупкам</a></p>
+        </div>
+    </div>
+
+    <h1 class="text-center"><strong>Обратите внимание на новинки!</strong></h1>
+
+    <div class="container">
+        <div class="row">
+            <ul class="list-unstyled">
+                {% for prod_img in products_images %}
+                    <li class="col-md-4">
+                        <div class="thumbnail">
+                          <img src="{{ prod_img.image.url }}" alt="" class="img-thumbnail">
+                          <div class="caption">
+                            <h3 class="text-center"><strong>{{ prod_img.product.name }}</strong></h3>
+                            <p>{{ prod_img.product.description }}</p>
+                            <p><button class="btn btn-default">Заказать!</button></p>
+                          </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+
+
+        </div>
+    </div>
+
+{% endblock  %}
+
+
+
+
+
+
