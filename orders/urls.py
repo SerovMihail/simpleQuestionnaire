@@ -19,6 +19,5 @@ from . import views
 
 
 urlpatterns = [
-    url(r'^order/$', views.product)
-
+    # url(r'^order/$', views.)
 ]

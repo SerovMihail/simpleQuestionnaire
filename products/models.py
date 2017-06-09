@@ -2,13 +2,13 @@ from django.db import models
 
 
 class Product(models.Model):
-    item_name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     delivery_date = models.DateField(auto_now_add=True, auto_now=False)
     price = models.DecimalField(decimal_places=2, max_digits=10, default=0.00)
     color = models.CharField(max_length=10, default='black')
 
     def __str__(self):
-        return 'Продукт %s' % self.item_name
+        return 'Цена: %s | Название %s' % (self.price, self.name)
 
     class Meta:
         verbose_name = 'Продукт'
@@ -21,8 +21,9 @@ class ProductImage(models.Model):
     is_active = models.BooleanField(default=True)
 
     def __str__(self):
-        return "Заказ %s" % self.product.item_name
+        return "Заказ %s" % self.product.name
 
     class Meta:
         verbose_name = 'Фото товара'
         verbose_name_plural = 'Фото товаров'
+
