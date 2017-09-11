@@ -10,6 +10,22 @@
   background-color: #F8F8F8;
 }
 
+.height-500 {
+  height: 500px;
+}
+
+.height-500 > img {
+  height: 50%;
+  width: auto;
+}
+
+.height-500 > .caption >  button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .footer-text {
   margin: 20px 0;
 }
